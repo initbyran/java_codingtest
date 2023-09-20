@@ -1,0 +1,46 @@
+SELECT
+    IF(sell_count = max_sell_count,
+        e.name,
+        IF(min_id = e.id,
+            CONCAT(e.name, ' and ', other_count - 1, ' other'),
+            NULL)
+    ) AS description,
+    sell_count
+FROM
+    (SELECT
+        employee_id,
+        COUNT(car_id) AS sell_count,
+        MIN(created_at) AS min_date
+    FROM
+        sellings
+    GROUP BY
+        employee_id) AS s
+JOIN
+    employees e
+ON
+    e.id = s.employee_id
+JOIN
+    (SELECT
+        MAX(sell_count) AS max_sell_count,
+        MIN(id) AS min_id,
+        COUNT(*) AS other_count
+    FROM
+        (SELECT
+            e.id,
+            COUNT(car_id) AS sell_count
+        FROM
+            employees e
+        LEFT JOIN
+            sellings s
+        ON
+            e.id = s.employee_id
+        GROUP BY
+            e.id) AS sell_stat
+    GROUP BY
+        sell_count
+    ORDER BY
+        sell_count DESC
+    LIMIT 1
+    ) AS stats
+ON
+    s.sell_count = stats.sell_count;
