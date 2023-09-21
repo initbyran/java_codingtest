@@ -2,6 +2,9 @@ package programmers;
 
 import java.util.*;
 
+/**
+ * 시간초과!!!!!!
+ */
 public class examNumPartner {
     public static void main(String[] args) {
 
@@ -18,14 +21,15 @@ public class examNumPartner {
             yCount[Y.charAt(i)-'0']++;
         }
 
-        String answer = "";
+        StringBuilder sb = new StringBuilder();
         for(int i=9; i>=0; i--) {
             int count = Math.min(xCount[i], yCount[i]);
             for (int j = 0; j < count; j++) {
-                answer += String.valueOf(i);
+                sb.append(String.valueOf(i));
             }
         }
 
+        String answer = sb.toString();
         if (answer.equals("")) {
             answer = "-1";
         } else if (answer.chars().allMatch(ch -> ch == '0')) {
