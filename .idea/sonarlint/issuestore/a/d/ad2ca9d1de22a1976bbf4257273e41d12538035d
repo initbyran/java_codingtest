@@ -1,0 +1,9 @@
+
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÈ³ò8¹ª¢»ª1
+9
+java:S1643
+"Use a StringBuilder instead.(Ùª‰ý8ñ™£»ª1
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(©âøƒ8»ª¢»ª1
+£
+java:S1598"€This file "examHidePhoneNum.java" should be located in "exam" directory, not in "C:\Users\initbyran\codingtest\src\programmers".(•í‡ºùÿÿÿÿ8»ª¢»ª1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ô¤„å8Àª¢»ª1

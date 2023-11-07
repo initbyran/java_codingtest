@@ -1,0 +1,9 @@
+
+8
+java:S1643"Use a StringBuilder instead.(¤¬ê8óÖÕ»ª1
+n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ªÌÉëşÿÿÿÿ8óÖÕ»ª1
+B
+java:S1905"&Remove this unnecessary cast to "int".(ò”¼q8şÖÕ»ª1
+U
+java:S4838"3Change "int" to the type handled by the Collection.(ñœÎúÿÿÿÿ8ÿÖÕ»ª1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ô¤„å8ˆ˜Ö»ª1
